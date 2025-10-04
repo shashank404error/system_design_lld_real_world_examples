@@ -58,6 +58,42 @@ This example demonstrates how to implement a food delivery application where:
 - When an algorithm uses data that clients shouldn't know about
 - When a class has multiple behaviors that appear as multiple conditional statements
 
+### 4. Factory Pattern
+
+**File:** [factoryDesignPatternExample.go](./factoryDesignPatternExample.go)
+
+**Real-World Example:** Vehicle Creation System
+
+This example demonstrates how to implement a vehicle creation system where:
+- Different types of vehicles (Car, Bike, Truck) can be created through a common interface
+- Each vehicle has specific behaviors (Drive, MaxSpeed, FuelType)
+- Clients can request a vehicle by specifying only its type name
+- New vehicle types can be added without modifying client code
+
+**When to Use:**
+- When a class can't anticipate the type of objects it must create
+- When you want to encapsulate object creation logic in a separate class
+- When you need to decouple client code from concrete product classes
+- When you want to provide a way to extend the product family easily
+
+### 5. Abstract Factory Pattern
+
+**File:** [abstractFactoryDesignPatternExample.go](./abstractFactoryDesignPatternExample.go)
+
+**Real-World Example:** Cross-Platform UI Toolkit
+
+This example demonstrates how to implement a cross-platform UI toolkit where:
+- Different UI components (Button, Checkbox) can be created for different platforms (Desktop, Mobile)
+- Each component maintains platform-specific look and behavior
+- A single entry point provides access to all components for a given platform
+- New platforms can be added without modifying existing client code
+
+**When to Use:**
+- When your system needs to be independent from how its products are created
+- When you need to work with multiple families of related products
+- When you want to provide a library of products without exposing implementation details
+- When you need to enforce constraints on product combinations
+
 ## How to Run
 
 Each example can be run independently using the Go command:
@@ -66,6 +102,8 @@ Each example can be run independently using the Go command:
 go run decoratorDesignPatternExample.go
 go run observerDesignPatternExample.go
 go run strategyDesignPatternExample.go
+go run factoryDesignPatternExample.go
+go run abstractFactoryDesignPatternExample.go
 ```
 
 ## Benefits of Design Patterns
