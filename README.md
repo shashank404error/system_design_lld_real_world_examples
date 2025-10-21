@@ -94,6 +94,24 @@ This example demonstrates how to implement a cross-platform UI toolkit where:
 - When you want to provide a library of products without exposing implementation details
 - When you need to enforce constraints on product combinations
 
+### 6. Proxy Pattern
+
+**File:** [proxyDesignPattern.go](./proxyDesignPattern.go)
+
+**Real-World Example:** Database Access Control System
+
+This example demonstrates how to implement a database access control system where:
+- A proxy controls access to database operations (Create, Read, Update, Delete)
+- Access is granted or denied based on user roles (admin vs. regular user)
+- The proxy implements the same interface as the real database connector
+- The client interacts with the proxy without knowing about the access control logic
+
+**When to Use:**
+- When you need to control access to an object
+- When you want to add functionality when accessing an object (like logging, caching)
+- When you need lazy initialization of expensive objects
+- When you want to implement a local representation of a remote object
+
 ## How to Run
 
 Each example can be run independently using the Go command:
@@ -104,6 +122,7 @@ go run observerDesignPatternExample.go
 go run strategyDesignPatternExample.go
 go run factoryDesignPatternExample.go
 go run abstractFactoryDesignPatternExample.go
+go run proxyDesignPattern.go
 ```
 
 ## Benefits of Design Patterns
